@@ -7,6 +7,14 @@
     <router-view/>
   </div>
 </template>
+<script>
+export default {
+  //进入应用初始化购物车数据
+  beforeCreate(){
+    this.$store.dispatch('cart/initialCarGoods')
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
